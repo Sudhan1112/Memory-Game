@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", serif;
+  }
+  
+  body {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #000000;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100%;
+  }
+  
+  #mg-game-game-area {
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin: 20px;
+  }
+  
+  .mg-game-card {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 0.6s;
+  }
+  
+  .mg-game-card.flip {
+    transform: translateX(-100%) rotateY(-180deg);
+  }
+  
+  .mg-game-card-front,
+  .mg-game-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    border-radius: 5px;
+  }
+  
+  .mg-game-card-front {
+    background: #000000;
+    border: 3px solid #ccc;
+    border-radius: 12px;
+}
+
+.mg-game-card-back {
+    border-radius: 12px;
+    background: #eeeeee;
+    border: 5px solid black;
+    transform: rotateY(180deg);
+    color: white;
+  }
+  
+  #mg-game-no-of-moves {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  #resetGame {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  #resetGame:hover {
+    background-color: #388e3c;
+  }
+  
